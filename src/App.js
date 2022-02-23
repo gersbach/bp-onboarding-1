@@ -4,10 +4,6 @@ import React, { useEffect, useState } from 'react';
 import Recipe from './Recipe';
 
 const App = () => {
-
-  
-  const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('chicken');
   
   const _APPID = 'be2da03d';
   const _APPKEY = 'b6331672325a732aaf6c27af08f06c59';
@@ -15,6 +11,8 @@ const App = () => {
   const temp = `https://api.edamam.com/search?q=${query}&app_id=be2da03d&app_key=b6331672325a732aaf6c27af08f06c59`
 
   const [recipes, setRecipes] = useState([]);
+  const [search, setSearch] = useState('');
+  const [query, setQuery] = useState('chicken');
 
   useEffect(()=>{
     getRecipes()
